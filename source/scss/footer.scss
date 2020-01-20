@@ -1,0 +1,119 @@
+.footer{
+	background: url('../img/asphalt.png');
+	padding: 20px 0 140px 0;
+	font-family: Montserrat-Medium;
+	font-size: 14px;
+	color: white;
+
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__signs{
+		margin: 10px;		
+	}
+
+	&__menu{
+		margin: 10px;
+	}
+
+	&__contacts{
+		margin: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__copyRight{
+		margin: 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+
+	&__linkLine{
+		margin-bottom: 10px;
+		display: block;
+		text-decoration: underline;
+	}
+
+	&__contactLine{
+
+	}
+
+	&__line{
+		margin-top: 10px;
+		font-size: 12px;
+
+		&_bottom{
+			margin: auto 0 0 0;
+		}
+	}
+}
+
+//--media queries
+@media screen and (max-width: 870px) {
+  .footer{
+
+		&__wrapper{
+			flex-wrap: wrap;
+		}
+
+		&__signs{
+			width: 45%;
+		}
+
+		&__menu{
+			width: 45%;
+		}
+
+		&__contacts{
+			width: 45%;
+		}
+
+		&__copyRight{
+			width: 45%;
+			align-items: flex-start;
+		}
+
+		&__logoSvg{
+			width: 4vw;
+			height: 4vw;
+		}
+
+		&__logoText{
+			font-size: 3.5vw;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+  .footer{
+
+		&__signs{
+			width: 100%;
+		}
+
+		&__menu{
+			width: 100%;
+		}
+
+		&__contacts{
+			width: 100%;
+		}
+
+		&__copyRight{
+			width: 100%;
+		}
+
+		&__logoSvg{
+			width: 6vw;
+			height: 6vw;
+		}
+
+		&__logoText{
+			font-size: 5vw;
+		}
+	}
+}

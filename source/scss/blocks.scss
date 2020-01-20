@@ -1,0 +1,533 @@
+//----logo------------
+.logo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+	&__svg{
+		fill: $mainOrange;
+		width: 32px;
+		height: 32px;
+	}
+
+	&__text{
+		margin-left: 10px;
+		color: white;
+		font-family: Montserrat-Bold, sans-serif;
+		font-size: 24px;
+	}	
+}
+
+//----nav------------
+.menu{
+	width: 100%;
+	margin-right: 8.5%;
+	margin-top: 10px;
+	max-width: 575px;
+
+	&__list{
+		display: flex;
+		justify-content: space-between;
+		font-family: Montserrat-Medium, sans-serif;
+		font-size: 16px;
+	}
+
+	&__item{
+		position: relative;
+		display: flex;
+		margin: 0 5px;
+		padding-bottom: 10px;
+		align-items: center;
+		cursor: pointer;
+
+		&:hover .menu__underLine{
+			opacity: 1;
+		}
+
+		&:hover .menu__chevron{
+			transform: rotate(0deg);
+		}
+
+		&_hover{
+			&:hover > ul{
+				display: flex;
+				opacity: 1;
+			}
+		}		
+	}
+
+	&__itemBlock{
+		position: relative;
+	}
+
+	&__chevron{
+		margin-left: 5px;
+		fill: white;
+		width: 12px;
+		height: 8px;
+		transition: opacity .2s, transform .2s;
+		transform: rotate(-90deg);
+	}
+
+	&__underLine{
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		background-color: $mainOrange;
+		width: 100%;
+		height: 4px;
+		opacity: 0;
+		transition: opacity .2s;
+		z-index: 2;
+	}
+	
+	&__link{
+
+	}
+
+	&__subList{
+		display: none;
+		position: absolute;
+		background-color: $dark;		
+		flex-direction: column;
+		bottom: -215px;
+		left: 0;
+		cursor: default;
+		z-index: 1;
+
+		&::before{
+			position: absolute;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 30px;
+			background-color: black;
+			top: -30px;
+			left: 0;
+			z-index: -1;
+			opacity: 0;
+		}
+	}
+
+	&__subItem{
+		padding: 10px 35px 10px 20px;
+		
+		&:hover .menu__subLink{
+			color: $mainOrange;
+		}
+
+		&:hover{
+			background-color:#3A3A47;
+		}
+	}
+
+	&__subLink{
+		white-space: nowrap;
+		cursor: default;
+	}
+}
+
+@media screen and (max-width: 1415px) {
+  .menu{
+		width: 48%;
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 1160px) {
+  .menu{
+		display: none;
+		width: 100%;
+		max-width: 100%;
+		height: 79%;
+
+		&__item{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 10px 0;
+			margin: 0;
+
+			& > ul{
+				display: none;
+				// display: flex;
+				position: relative;				
+				padding: 10px 0;
+				width: 100%;
+				background-color: none;
+				bottom: 0;
+				left: 0;
+				cursor: default;
+		
+				&::before{
+					display: none;
+				}
+
+				& > li{
+					padding: 10px 0;
+
+					& > a{
+						white-space: normal;
+					}
+				}
+			}
+		}
+
+		&__list{
+			flex-direction: column;
+		}
+	}
+}
+
+@media screen and (max-width: 420px) {
+  .menu{
+		
+		&__item > ul{
+			padding: 10px 0 0 0;
+		}
+	}
+}
+
+//---mobileBurger----
+.burgerMenu{
+	display: block;
+	cursor: pointer;
+
+	&__line{			
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		margin: 5px;
+	}
+}
+
+.closeBurger{
+	display: none;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	fill: white;
+}
+
+//----downloadXSLX-----
+.downloadXSLX{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__svg{
+		fill: #219653;
+		width: 22px;
+		height: 24px;
+	}
+
+	&__p{
+		margin-left: 5px;
+		color: white;
+		text-decoration: underline;
+		font-family: Montserrat-Medium;
+		font-size: 16px;
+	}
+}
+
+//---------phoneNumber---------
+.phoneNumber{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&__svg{
+		fill: $mainOrange;
+		width: 18px;
+		height: 18px;
+	}
+
+	&__number{
+		margin-left: 5px;
+		color: white;
+		font-size: 16px;
+	}
+}
+
+//----button------
+.button{
+	display: inline-block;
+	background-color: $mainOrange;
+	text-align: center;
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 20px;
+	transition: background-color .2s;
+	cursor: pointer;
+	font-family: Montserrat-Bold, sans-serif;
+	font-size: 12px;
+	color: $dark;
+
+	&:hover{
+		background-color: $mainYellow;
+	}
+
+	&:active{
+		color: rgba(0, 0, 0, 0.7);
+		background-color: rgba(255, 238, 2, 0.7);
+	}
+}
+
+.button_small{
+	height: 32px;
+	line-height: 32px;
+	border-radius: 16px;
+	font-size: 10px;
+}
+
+.button_big{
+	width: 200px;
+	height: 48px;
+	line-height: 48px;
+	font-size: 14px;
+	border-radius: 24px;
+}
+
+.button_disabled{
+	color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(255, 183, 27, 0.6);
+}
+
+//----typeOfSign
+.typeOfSign{
+	visibility: hidden;
+	position: relative;
+	margin: 5px;
+	text-align: center;	
+	cursor: default;
+
+	&__border{
+		position: relative;
+		display: inline-block;
+		margin-bottom: -67px;
+		padding: 13px;
+		background-color: white;
+		border: 7px solid $mainOrange;
+		z-index: 2;
+
+		&:hover + .typeOfSign__desc{
+			background-color: $mainOrange;
+		}
+	}
+
+	&__svg{
+		display: block;
+		fill: black;
+		width: 64px;
+		height: 64px;
+	}
+
+	&__desc{
+		position: relative;
+		width: 264px;
+		height: 168px;
+		background-color: white;
+		transition: background-color .2s;
+
+		&:hover{
+			background-color: $mainOrange;
+		}
+	}
+
+	&__descText{
+		position: absolute;
+		bottom: 19%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+		font-family: Montserrat-Bold, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		color: $dark;
+	}
+}
+
+//-----advantage
+.advantage{
+	visibility: hidden;
+	display: inline-block;
+	position: relative;
+	cursor: default;
+
+	&__border{
+		position: absolute;
+		display: inline-block;
+		padding: 9px;
+		top: 32px;
+		background-color: white;
+		border: 5px solid $mainOrange;
+		z-index: 1;
+		&:hover + .advantage__desc{
+			background-color: $mainOrange;
+		}
+	}
+
+	&__svg{
+		display: block;
+		fill: black;
+		width: 56px;
+		height: 56px;
+	}
+
+	&__desc{
+		position: relative;
+		background-color: #F3F3F3;
+		padding: 9% 35px 5% 45px;
+		margin-left: 50px;
+		width: 408px;
+		height: 248px;
+		transition: background-color .2s;
+
+		&:hover{
+			background-color: $mainOrange;
+		}
+	}
+
+	&__title{
+		font-family: Montserrat-Bold;
+		font-size: 24px;
+		color: $dark;
+	}
+
+	&__info{
+		margin-top: 20px;
+		font-family: Montserrat-Medium, sans-serif;
+		font-size: 16px;
+		line-height: 24px;
+		color: $dark;
+	}
+}
+
+@media screen and (max-width: 560px) {
+  .advantage{
+	
+		&__border{
+			padding: 5px;
+		}
+	
+		&__svg{
+			width: 43px;
+			height: 43px;
+		}
+	
+		&__desc{
+			max-width: 408px;
+			max-height: 248px;
+			min-height: 208px;
+			width: 80vw;
+			height: 40vw;
+			padding: 9% 5% 5% 75px;
+			margin-left: 0;
+		}
+	
+		&__title{
+			font-size: 16px;
+		}
+	
+		&__info{
+			font-size: 14px;
+		}
+	}
+}
+
+//----table
+.priceList{
+	font-family: Montserrat-Bold, sans-serif;
+	font-size: 16px;
+	width: 100%;
+	min-width: 1100px;
+	background-color: #F9F9F9;	
+	color: white;
+	text-align: center;
+	cursor: default;
+	border-collapse:collapse;
+
+	&__captions{
+		background-color: $dark;
+
+		&>tr>td{
+			padding: 10px;
+		}
+	}
+
+	&__body{
+		background-color: white;
+		color: $dark;
+
+		&>tr{
+			&:hover{
+				border: 2px solid $mainOrange;
+			}
+		}
+
+		&>tr>td{
+			padding: 25px 0;
+		}
+	}
+
+	&__2{
+		background-color: #F9F9F9;
+	}
+}
+
+
+
+//mainTitle---------
+.mainTitle{
+	visibility: hidden;
+	position: relative;
+	font-family: Montserrat-Bold, sans-serif;
+	font-size: 32px;
+	color: $dark;
+	z-index: 1;
+}
+
+//mainInfo
+.mainInfo{
+	margin-top: 32px;
+	font-family: Montserrat-Medium, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: $dark;
+}
+
+//lineDecorator------------
+.lineDecorator{
+	position: relative;
+
+	&::after{
+		position: absolute;
+		left: 0;
+		bottom: 7px;
+		display: block;
+		content: '';
+		width: 60px;
+		height: 48%;
+		background-color: $mainYellow;
+		z-index: -1;
+	}
+}
+
+//---parallax
+.parallax{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	&__background{
+		position: absolute;
+		left: -18%;
+		top: -18%;
+		width: 136%;
+		height: 136%;
+	}
+}

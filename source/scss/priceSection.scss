@@ -1,0 +1,102 @@
+.priceSection{
+	position: relative;
+	background-color: #E5E5E5;
+	padding: 77px 0 150px 0;
+
+	&__typesOfSigns{
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+
+	&__title{
+		margin-top: 90px;
+	}
+
+	&__info{
+		max-width: 950px;
+	}
+
+	&__info_mt25{
+		margin-top: 25px;
+	}
+
+	&__priceList{
+		margin-top: 35px;
+		width: 100%;
+	}
+
+	&__button{
+		display: block;
+		margin: 30px auto 0 auto;
+		text-transform: uppercase;
+		width: 240px;
+	}
+
+	&__downloadXSLX{
+		display: inline-block;
+		margin-top: 30px;
+		margin-left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__xslxsvg{
+		
+	}
+
+	&__xslxp{
+		
+		color: $dark;
+	}
+}
+
+//media queries
+
+@media screen and (max-width: 1655px) {
+  .priceSection {
+
+		&__typesOfSigns {
+			justify-content: center;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		&__typesOfSigns > *{
+			margin: 30px 60px;
+		}
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .priceSection {
+
+		&__typesOfSigns {
+			justify-content: space-center;
+		}
+
+		&__typesOfSigns > *{
+			margin: 20px 20px;
+		}
+  }
+}
+
+@media screen and (max-width: 1240px) {
+  .priceSection {
+		&__priceList{
+			overflow: scroll;
+		}
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .priceSection {
+
+		&__typesOfSigns > *{
+			margin: 15px 5px;
+		}
+  }
+}

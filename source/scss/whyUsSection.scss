@@ -1,0 +1,44 @@
+.whyUsSection{
+	padding: 88px 0 78px 0;
+	
+	&__lineDecor{
+		position: relative;
+
+		&::after{
+			position: absolute;
+			left: 0;
+			bottom: 7px;
+			display: block;
+			content: '';
+			width: 60px;
+			height: 48%;
+			background-color: $mainYellow;
+			z-index: -1;
+		}
+	}
+
+	&__advantageList{
+		margin-top: 25px;
+		margin-left: -5px;
+		margin-right: -5px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__advantage{
+		margin: 12px 5px;
+	}
+}
+
+
+//---media quires
+
+@media screen and (max-width: 1475px) {
+  .whyUsSection{
+
+		&__advantageList{
+			justify-content: space-evenly;
+		}
+	}
+}

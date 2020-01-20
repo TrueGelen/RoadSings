@@ -1,0 +1,54 @@
+.aboutUsSection{
+	background-color: #E5E5E5;
+	padding: 88px 0 120px 0;
+
+	&__wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__left{
+		margin-bottom: 50px;
+		margin-right: 20px;
+	}
+
+	&__right{
+		position: relative;
+	}
+
+	&__backgroundImg{
+		max-width: 816px;
+		width: 45vw;
+	}
+
+	&__logo{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__logoSvg{
+		width: 4vw;
+		height: 4vw;
+	}
+
+	&__logoText{
+		font-size: 3vw;
+	}
+}
+
+//----media queries
+@media screen and (max-width: 1000px) {
+  .aboutUsSection{
+
+		&__right{
+			display: none;
+		}
+
+		&__left{
+			margin: 0;
+		}
+	}
+}
