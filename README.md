@@ -1,12 +1,11 @@
-# [myHealth](https://truegelen.github.io/myHealth/dist/)
-[Link to this page](https://truegelen.github.io/myHealth/dist/)
+# [RoadSins](https://truegelen.github.io/RoadSings/dist/)
+[Link to this page](https://truegelen.github.io/RoadSings/dist/)
 ---------------------------------
 ***Used technology stack:***
 * HTML
 * CSS
 * JS
 * Gulp + Webpack
-* SmartGrid
 * Scss
 
 ***methodology organization of markup and styles(html,css):***
@@ -14,6 +13,6 @@
 
 ***I also worked here with:***
 * svg
-* js animations
-* js oop (here was made a slider)
+* css animations
+* parallax
 * and of course, landing is fully responsive
