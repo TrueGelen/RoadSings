@@ -528,3 +528,18 @@
 		height: 136%;
 	}
 }
+
+//--media queries
+@media screen and (max-width: 800px) {
+	.parallax{
+	
+		&__background{
+			position: absolute;
+			// top: 0%;
+			left: -50%;
+			// transform: translate(-50%, -50%);
+			width: auto;
+			// height: auto;
+		}
+	}
+}
